@@ -20,7 +20,7 @@ public class MP3 implements IPrehravac{
     }
 
     public String toString(){
-        System.out.println("MP3: "+znacka);
+        System.out.println(znacka+" (MP3)");
         return znacka;
     }
 }

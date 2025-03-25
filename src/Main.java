@@ -47,26 +47,62 @@ public class Main {
             System.out.println("Konex");
         }
         else{
-            System.out.println("1 Vypsat všechna zařízení");
-            System.out.println("2 Přehrát");
-            System.out.println("3 Zastavit přehrávání");
-            System.out.println("4 přehrát specifickou písničku");
-            int y = sc.nextInt();
-            switch (y){
-                case 1:
-                    for (int k = 0; k < prehravac.length; k++) {
-                        prehravac[k].toString();
-                    }
-                    break;
-                case 2:
+            for (int i = 0; i < 1; i--) {
 
-                    break;
-                case 3:
+                System.out.println("1 Vypsat všechna zařízení");
+                System.out.println("2 Přehrát");
+                System.out.println("3 Zastavit přehrávání");
+                System.out.println("4 přehrát specifickou písničku");
+                int y = sc.nextInt();
+                sc.nextLine();
+                if (y>4||y<1) {
+                    System.err.println("Špatně 😡");
+                }
+                switch (y){
+                    case 1:
+                        for (int k = 0; k < prehravac.length; k++) {
+                            prehravac[k].toString();
+                        }
+                        break;
+                    case 2:
+                        System.out.println("Kolikáté zařířízení má začít přehrávat?");
+                        int f = sc.nextInt();
+                        sc.nextLine();
+                        if (f> prehravac.length||f<0) {
+                            System.err.println("Špatně 😡");
+                        }
+                        else{
+                            System.out.println("Zařízení "+prehravac[f-1].toString()+" začalo přehrávat");
+                        }
 
-                    break;
-                case 4:
+                        break;
+                    case 3:
+                        System.out.println("Kolikáté zařířízení má přestat přehrávat?");
+                        int e = sc.nextInt();
+                        sc.nextLine();
+                        if (e> prehravac.length||e<0) {
+                            System.err.println("Špatně 😡");
+                        }
+                        else{
+                            System.out.println("Zařízení "+prehravac[e-1].toString()+" přestalo přehrávat");
+                        }
 
-                    break;
+                        break;
+                    case 4:
+                        System.out.println("Jakou chcete přehrát písničku?");
+                        String pisnicka = sc.nextLine();
+                        System.out.println("Na jakém zařízení?");
+                        int l = sc.nextInt();
+                        sc.nextLine();
+                        if (l> prehravac.length||l<0) {
+                            System.err.println("Špatně 😡");
+                        }
+                        else{
+                            System.out.println("Písnička "+pisnicka+" nyní přehrává na zařízení "+prehravac[l-1].toString());
+                        }
+
+                        break;
+                }
             }
         }
     }

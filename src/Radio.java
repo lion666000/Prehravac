@@ -11,7 +11,7 @@ public class Radio implements IPrehravac{
     }
 
     public String toString(){
-        System.out.println("Radio: idk");
+        System.out.println("idk (Raido)");
         return "raido";
     }
 }

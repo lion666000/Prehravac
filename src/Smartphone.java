@@ -18,7 +18,7 @@ public class Smartphone implements IPrehravac {
     }
 
     public String toString(){
-        System.out.println("Smartphone: "+model);
+        System.out.println(model+" (Smartphone)");
         return model;
     }
 }
